@@ -22,9 +22,9 @@ public class WeatherForecastController : ControllerBase
     [HttpGet]
     public IEnumerable<WeatherForecast> Get()
     {
-        var response = IntegratorContext.Current.FakeStoreBusinessContext.ProductBusiness.GetAllProducts();
+        // var response = IntegratorContext.Current.FakeStoreBusinessContext.ProductBusiness.GetAllProducts();
 
-        var categories= IntegratorContext.Current.FakeStoreBusinessContext.CardsBusiness.GetAllCards();
+        // var categories= IntegratorContext.Current.FakeStoreBusinessContext.CardsBusiness.GetAllCards();
       
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
