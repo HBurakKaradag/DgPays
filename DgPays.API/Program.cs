@@ -1,15 +1,15 @@
-using DgPays.API.JsonContractResolvers;
-using Newtonsoft.Json.Serialization;
+using DgPays.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddTransient<IProductService, ProductService>();
 
-builder.Services.AddControllers()
-                .AddNewtonsoftJson(option => option.SerializerSettings.ContractResolver = new DefaultContractResolver
-                {
-                    NamingStrategy = new CustomerNameStrategy()
-                });
+ builder.Services.AddControllers();
+ 
+//                 .AddNewtonsoftJson(option => option.SerializerSettings.ContractResolver = new DefaultContractResolver
+//                 {
+//                     NamingStrategy = new CustomerNameStrategy()
+//                 });
 
 builder.Services.AddSwaggerGen(c =>
 {

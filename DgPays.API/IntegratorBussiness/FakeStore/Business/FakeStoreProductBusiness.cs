@@ -9,7 +9,7 @@ namespace DgPays.API.IntegratorBussiness.FakeStore.Business
     public class FakeStoreProductBusiness : IntegratorBusiness<ProductsClient, FakeStoreBusinessContext>
     {
 
-        public ApiResponse<List<Product>> GetAllProducts()
+        public  ApiResponse<List<Product>> GetAllProducts()
         {
             var products =  base.Client.Products();
 

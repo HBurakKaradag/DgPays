@@ -21,8 +21,8 @@ namespace DgPays.Integrators.FakeStore
         {
             const string OPERATION_URL = nameof(Products);
 
-            var response = base.Get<ApiResponse<List<Product>>>(OPERATION_URL, null);
-            return response;
+            var response = base.Get<List<Product>>(OPERATION_URL, null);
+            return new ApiResponse<List<Product>>{ Body = response };
 
         }
 
