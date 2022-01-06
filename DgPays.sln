@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DgPays.Domain", "DgPays.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DgPays.Integrators.FakeStore", "DgPays.Integrators.FakeStore\DgPays.Integrators.FakeStore.csproj", "{BE5C416A-2455-4784-9057-85F06CD80791}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DgPays.ProductConsumer", "DgPays.ProductConsumer\DgPays.ProductConsumer.csproj", "{7C212932-F4A7-464F-9418-7D2E99C9A40D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{BE5C416A-2455-4784-9057-85F06CD80791}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE5C416A-2455-4784-9057-85F06CD80791}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE5C416A-2455-4784-9057-85F06CD80791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C212932-F4A7-464F-9418-7D2E99C9A40D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C212932-F4A7-464F-9418-7D2E99C9A40D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C212932-F4A7-464F-9418-7D2E99C9A40D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C212932-F4A7-464F-9418-7D2E99C9A40D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
