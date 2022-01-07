@@ -16,17 +16,17 @@ namespace DgPays.ProductConsumer.Services
         }
         public async Task<bool> SetProduct(string content)
         {
-            // Business
             IBucket productBucket = _productBucketProvider.GetBucketAsync().GetAwaiter().GetResult();
             var products = JsonConvert.DeserializeObject<List<Product>>(content);
 
             var collection = await productBucket.DefaultCollectionAsync();
 
-            products.ForEach(async p =>
-            {
-                var collectionId = "Product_" + p.Id;
-                await collection.InsertAsync(collectionId, p);
-            });
+            products.ForEach(p =>
+           {
+               var guid = Guid.NewGuid();
+               var collectionId = $"Product_{p.Id}_{guid}";
+               collection.InsertAsync(collectionId, p);
+           });
 
             return await Task.FromResult<bool>(true);
 
