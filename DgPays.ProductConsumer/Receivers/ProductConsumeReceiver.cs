@@ -37,10 +37,10 @@ namespace DgPays.ProductConsumer.Receivers
         {
             IConnectionFactory connectionFactory = new ConnectionFactory()
             {
-                HostName = _rabbitSettings.Host,
-                UserName = _rabbitSettings.UserName,
-                Password = _rabbitSettings.Password,
-                Port = _rabbitSettings.Port,
+                HostName =   "rabbitmq", // _rabbitSettings.Host,
+                UserName = "guest" ,// _rabbitSettings.UserName,
+                Password = "guest" ,// _rabbitSettings.Password,
+                Port =  5672 ,// _rabbitSettings.Port,
                 Ssl = new SslOption { Enabled = _rabbitSettings.Ssl }
             };
 

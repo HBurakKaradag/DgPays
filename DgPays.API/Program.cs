@@ -1,6 +1,9 @@
+using System.Net;
+using DgPays.API.Middlewares;
 using DgPays.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.UseKestrel(options => { options.Listen(IPAddress.Any, 80); });
 
 builder.Services.AddTransient<IProductService, ProductService>();
 
@@ -25,11 +28,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DgPays.API v1"));
 }
 
+app.UseMiddleware<RequestResponseMiddleware>();
 
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
-app.UseAuthorization();
+//app.UseAuthorization();
 
 app.MapControllers();
 

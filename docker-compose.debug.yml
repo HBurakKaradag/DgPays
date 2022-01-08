@@ -1,0 +1,11 @@
+
+version: '3.4'
+
+services:
+  dgpaysproductconsumer:
+    image: dgpaysproductconsumer
+    build:
+      context: .
+      dockerfile: DgPays.ProductConsumer/Dockerfile
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
